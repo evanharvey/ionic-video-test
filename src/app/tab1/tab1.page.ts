@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SmartAudio } from 'src/providers/smart-audio';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(
+    private audio: SmartAudio,
+  ) {
+    audio.preload('doit', '/assets/sound.mp3')
+  }
+
+  doit() {
+    this.audio.play('doit')
+  }
 
 }
