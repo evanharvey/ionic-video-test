@@ -1,0 +1,7 @@
+{
+  "name": "videoTest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
